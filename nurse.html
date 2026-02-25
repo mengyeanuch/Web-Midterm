@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nurse Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- <script>
+let role = getCookie("active_role");
+if(!role){
+    window.location.replace("error.html");
+}
+</script> -->
+
+<script src="script.js"></script>
+<script>
+window.onload = function() {
+    let role = getCookie("active_role");
+
+    if(role !== "nurse" && role !== "admin"){
+        window.location.replace("error.html");
+    }
+}
+</script>
+
+<header>
+    <h2>Nurse Dashboard</h2>
+</header>
+
+<nav class="sidebar">
+    <a href="dashboard.html">Dashboard</a>
+    <button onclick="logout()">Logout</button>
+</nav>
+
+<main class="content">
+    <h3>Welcome Nurse</h3>
+    <p>You can view patient alerts and medicine orders.</p>
+</main>
+
+<footer>
+    <p>Nurse Access</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

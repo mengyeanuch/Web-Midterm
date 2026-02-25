@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PulsePoint CIS - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>PulsePoint Clinical Information System</h2>
+</header>
+
+<main class="center">
+
+    
+    <form id="loginForm" method="POST" action="https://jsonplaceholder.typicode.com/users">
+        <h3>Login</h3>
+        <label for ="practitioner_id">Practitioner ID</label>
+        <input type="text" id="practitioner_id" placeholder="Practitioner ID" name="practitioner_id"required><br><br>
+            <label for ="role"> Login as </label>
+            <select name="role" id="role">
+                <option value="nurse">Nurse</option>
+                <option value="admin">Admin</option>
+            </select><br><br>
+
+            <input type="password" id="password" placeholder="Password"minlength="8" required>
+            <button type="button" onclick="togglePassword()">Show</button>
+
+            <p id="strengthMessage"></p>
+
+            <button type="submit">Login</button>
+        </form>
+    
+</main>
+
+<footer>
+    <p>© 2026 PulsePoint Hospital</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

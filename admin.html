@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- <script>
+let role = getCookie("active_role");
+if(!role || role !== "admin"){
+    window.location.replace("error.html");
+}
+</script> -->
+
+
+<script src="script.js"></script>
+<script>
+window.onload = function() {
+    let role = getCookie("active_role");
+
+    if(role !== "admin"){
+        window.location.replace("error.html");
+    }
+}
+</script>
+
+<header>
+    <h2>Admin Dashboard</h2>
+</header>
+
+<nav class="sidebar">
+    <a href="dashboard.html">Dashboard</a>
+    <button onclick="logout()">Logout</button>
+</nav>
+
+<main class="content">
+    <h3>Staff List (Admin Only)</h3>
+    <ul>
+        <li>Dr. Smith</li>
+        <li>Nurse Anna</li>
+        <li>Dr. John</li>
+    </ul>
+</main>
+
+<footer>
+    <p>Admin Access</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
